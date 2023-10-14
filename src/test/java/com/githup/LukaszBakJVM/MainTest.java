@@ -1,6 +1,6 @@
 package com.githup.LukaszBakJVM;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,11 +17,11 @@ class MainTest {
         //when
         int i = Main.smallestDistance(s, s1, words);
         //then
-        Assertions.assertEquals(5, i);
+        assertEquals(5, i);
     }
 
     @Test
-    void smallestDistance2() {
+    void smallestDistance1() {
       //given
         String s = "hello";
         String s1 = "world";
@@ -29,6 +29,18 @@ class MainTest {
         //when
         int i = Main.smallestDistance(s, s1, words);
         //then
-        Assertions.assertEquals(1, i);
+        assertEquals(1, i);
     }
+    @Test
+    void smallestDistance3() {
+        //given
+        String s = "hello";
+        String s1 = "world";
+        String words = "dog cat hello cat dog cat world";
+        //when
+        int i = Main.smallestDistance(s, s1, words);
+        //then
+        assertEquals(3, i);
+    }
+
 }
